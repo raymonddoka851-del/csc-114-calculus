@@ -1,0 +1,117 @@
+{
+    "course":  "CSC 114",
+    "brandMark":  "C",
+    "brandName":  "CSC 114",
+    "brandSub":  "Revision Notes",
+    "suffix":  "CSC 114 Revision",
+    "metadesc":  "Study notes for CSC 114 Differential and Integral Calculus, arranged by module and the course outline.",
+    "kicker":  "CSC 114 · University of Embu",
+    "heroTitle":  "Differential and Integral Calculus",
+    "heroLede":  "Course notes, interactive progress tracking, topic search and practice — built for learning from the foundations.",
+    "footer":  "CSC 114 — Differential and Integral Calculus. Source-based study notes.",
+    "repoUrl":  "https://github.com/raymonddoka851-del/csc-114-calculus/blob/main/",
+    "accent":  "#2563eb",
+    "accent2":  "#0f766e",
+    "accentDark":  "#93c5fd",
+    "accent2Dark":  "#5eead4",
+    "store":  "csc114",
+    "quizHub":  "All quizzes",
+    "docset":  [
+                   {
+                       "md":  "START_HERE.md",
+                       "group":  "Start here",
+                       "label":  "Start here",
+                       "out":  "START_HERE.html"
+                   },
+                   {
+                       "md":  "YOUR_STUDY_PLAN.md",
+                       "group":  "Start here",
+                       "label":  "Your study plan",
+                       "out":  "YOUR_STUDY_PLAN.html"
+                   },
+                   {
+                       "md":  "CHEAT_SHEET.md",
+                       "group":  "Start here",
+                       "label":  "Cheat sheet",
+                       "out":  "CHEAT_SHEET.html"
+                   },
+                   {
+                       "md":  "PROGRESS_TRACKER.md",
+                       "group":  "Start here",
+                       "label":  "Progress tracker",
+                       "out":  "PROGRESS_TRACKER.html"
+                   },
+                   {
+                       "md":  "notes/01_module-1-basic-mathematics.md",
+                       "group":  "Notes",
+                       "label":  "01 · Module 1 — Basic Mathematics",
+                       "out":  "notes/01_module-1-basic-mathematics.html"
+                   },
+                   {
+                       "md":  "notes/02_module-2-number-systems-and-functions.md",
+                       "group":  "Notes",
+                       "label":  "02 · Module 2 — Number Systems and Functions",
+                       "out":  "notes/02_module-2-number-systems-and-functions.html"
+                   },
+                   {
+                       "md":  "notes/03_module-3-introduction-to-differentiation.md",
+                       "group":  "Notes",
+                       "label":  "03 · Module 3 — Introduction to Differentiation",
+                       "out":  "notes/03_module-3-introduction-to-differentiation.html"
+                   },
+                   {
+                       "md":  "notes/04_module-4-methods-of-differentiation.md",
+                       "group":  "Notes",
+                       "label":  "04 · Module 4 — Methods of Differentiation",
+                       "out":  "notes/04_module-4-methods-of-differentiation.html"
+                   },
+                   {
+                       "md":  "notes/05_module-5-applications-of-differentiation.md",
+                       "group":  "Notes",
+                       "label":  "05 · Module 5 — Applications of Differentiation",
+                       "out":  "notes/05_module-5-applications-of-differentiation.html"
+                   },
+                   {
+                       "md":  "notes/06_module-6-integral-calculus.md",
+                       "group":  "Notes",
+                       "label":  "06 · Module 6 — Integral Calculus",
+                       "out":  "notes/06_module-6-integral-calculus.html"
+                   },
+                   {
+                       "md":  "notes/07_module-7-applications-of-integration.md",
+                       "group":  "Notes",
+                       "label":  "07 · Module 7 — Applications of Integration",
+                       "out":  "notes/07_module-7-applications-of-integration.html"
+                   },
+                   {
+                       "md":  "notes/08_module-8-integration-by-substitution-and-parts.md",
+                       "group":  "Notes",
+                       "label":  "08 · Module 8 — Integration by Substitution and Parts",
+                       "out":  "notes/08_module-8-integration-by-substitution-and-parts.html"
+                   },
+                   {
+                       "md":  "notes/09_module-9-partial-fractions.md",
+                       "group":  "Notes",
+                       "label":  "09 · Module 9 — Partial Fractions",
+                       "out":  "notes/09_module-9-partial-fractions.html"
+                   },
+                   {
+                       "md":  "notes/10_module-10-mean-value-theorem.md",
+                       "group":  "Notes",
+                       "label":  "10 · Module 10 — Mean Value Theorem",
+                       "out":  "notes/10_module-10-mean-value-theorem.html"
+                   },
+                   {
+                       "md":  "practice/QUESTION_BANK.md",
+                       "group":  "Practice",
+                       "label":  "Question bank",
+                       "out":  "practice/QUESTION_BANK.html"
+                   },
+                   {
+                       "md":  "practice/ANSWER_KEY.md",
+                       "group":  "Practice",
+                       "label":  "Answer key",
+                       "out":  "practice/ANSWER_KEY.html"
+                   }
+               ]
+}
