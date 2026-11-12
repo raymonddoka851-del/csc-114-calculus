@@ -35,228 +35,48 @@
     </div>
   </div>
   <article class="content">
-<div class="page-tools"><span class="check-count" id="checkCount">0 / 3 done</span><button type="button" class="reset-btn" id="resetChecks">Reset checklist</button><button type="button" class="done-btn" id="markDone">Mark as done</button></div>
+<div class="page-tools"><button type="button" class="done-btn" id="markDone">Mark as done</button></div>
 <h1 id="04-module-4-methods-of-differentiation">04 · Module 4 — Methods of Differentiation</h1>
-<blockquote><p>Source: Module 4.txt. This page is searchable, and the checklist state is saved in this browser.</p></blockquote>
-<h2 id="learning-checks">Learning checks</h2>
+<p><img class="note-figure" src="../assets/figures/module-4-image1.png" alt="Source illustration from Calculus Module 4" loading="lazy" decoding="async"></p>
+<blockquote><p>Source: Calculus Module 4. Identify the structure of an expression before choosing a rule.</p></blockquote>
+<h2 id="product-quotient-and-chain-rules">Product, quotient, and chain rules</h2>
+<p>For differentiable f and g:</p>
 <ul>
-<li><label class="task"><input type="checkbox" class="task-check" id="task1" data-task="task1"> <span class="task-text">Identify the key terms and explain them without looking.</span></label> </li>
-<li><label class="task"><input type="checkbox" class="task-check" id="task2" data-task="task2"> <span class="task-text">Summarize the main idea in your own words.</span></label> </li>
-<li><label class="task"><input type="checkbox" class="task-check" id="task3" data-task="task3"> <span class="task-text">Work through an example or answer a related question.</span></label> </li>
+<li><strong>Product:</strong> (fg)′ = f′g + fg′</li>
+<li><strong>Quotient:</strong> (f/g)′ = (f′g − fg′)/g², where g ≠ 0</li>
+<li><strong>Chain:</strong> if y = f(u) and u = g(x), then dy/dx = (dy/du)(du/dx)</li>
 </ul>
-<h2 id="course-notes">Course notes</h2>
-<p>Department of Mathematics and Statistics</p>
-<p>MODULE 5</p>
-<p>COURSE CODE: CSC 114                   COURSE TITLE: Differential and integral Calculus</p>
-<p>CHAPTER TWO</p>
-<p>DIFFERENTIATION</p>
-<p>2.3 Derivatives of Trigonometric Functions</p>
-<p>ddxsin(x)=cos(x),</p>
-<p>ddxcos(x)=-sinx,</p>
-<p>ddxtanx=ddxsinxcosx=cosxcosx-sinx-sinxcosx2</p>
-<p>=cos2x+sin2(x)cos2x=1cos2x=sec2x.</p>
-<p>Also note that</p>
-<p>ddxcotx=-csc2x,</p>
-<p>ddxsecx=secxtanx,</p>
-<p>ddxcsc(x)=-cscxcotx.</p>
-<p>Examples</p>
-<p>Differentiate each of the following functions:</p>
-<p>gx=3sec(x)-10cot(x).</p>
-<p>hw=3w-4-w2tanw.</p>
-<p>y=5sin(x)cos(x)+4csc(x).</p>
-<p>pt=sin(t)3-2cos(t).</p>
-<p>Solution</p>
-<p>g'x=3sec(x)tan(x)-10-csc2x=3secxtanx+10csc2x.</p>
-<p>h'w=-12w-5-2wtanw+w2sec2w</p>
-<p>=-12w-5-2wtanw-w2sec2w.</p>
-<p>y'=5cosxcosx+5sinx-sinx-4cscxcotx</p>
-<p>=5cos2x-5sin2x-4cscxcotx.</p>
-<p>p't=cos(t)3-2cos(t)-sin(t)2sin(t)3-2cos(t)2=3cos(t)-2cos2t-2sin2(t)3-2cos(t)2=3cos(t)-23-2cos(t)2.</p>
-<p>2.4 Derivatives of Exponential and Logarithmic Functions</p>
-<p>ddxex=ex.</p>
-<p>ddxlnx=1x.</p>
-<p>Note that lnx=loge(x) is called the natural logarithm.</p>
-<p>ddxln-x=1-x-1=1x.</p>
-<p>What about ddxax and ddxloga(x) ?</p>
-<p>Note that a=eln(a). Then,</p>
-<p>ax=eln(a)x=exln(a),</p>
-<p>and we can compute the derivative using the chain rule.</p>
-<p>ddxax=ddxeln(a)x=ddxexln(a)=lnaexlna=lnaax.</p>
-<p>Likewise, we can compute the derivative of the logarithmic function loga(x).</p>
-<p>Since x=eln(x), we can take the logarithm base a of both sides to get</p>
-<p>logax=logaeln(x)=lnxlogae.</p>
-<p>Then</p>
-<p>ddxlogax=1xlogae.</p>
-<p>The above is a perfectly good answer, but we can improve it slightly.</p>
-<p>Since a=eln(a),</p>
-<p>logaa=logaeln(a)=lnalogae⟹1=lnalogae⟹1lna=logae,</p>
-<p>and hence,</p>
-<p>ddxlogax=1xlogae=1xlna.</p>
-<p>Example 1</p>
-<p>Compute the derivative of fx=2x.</p>
-<p>Solution</p>
-<p>ddx2x=ddxeln(2)x=ddxexln(2)=ln2exln2=2xln2.</p>
-<p>Example 2</p>
-<p>Compute the derivative of fx=2x2.</p>
-<p>Solution</p>
-<p>ddx2x2=ddxex2ln(2)=2xln2ex2ln2=2ln2x2x2.</p>
-<p>Example 3</p>
-<p>Compute the derivative of fx=xx.</p>
-<p>Solution</p>
-<p>At first, this appears to be a new kind of function, but it is not harder than the previous examples.</p>
-<p>Note that</p>
-<p>ddxxx=ddxexln(x)=ddxxln(x)exln(x)=x×1x+ln(x)xx=1+ln(x)xx.</p>
-<p>Example 4</p>
-<p>Compute the derivative of fx=xr.</p>
-<p>Solution</p>
-<p>ddxxr=ddxerln(x)=ddxrln(x)erln(x)=x×1xxr=rxr-1.</p>
-<p>Exercise</p>
-<p>Find the derivatives of</p>
-<p>3x2.</p>
-<p>x2ex.</p>
-<p>ex2.</p>
-<p>xcos(x).</p>
-<p>esin(x).</p>
-<p>xln(x).</p>
-<p>2.5 Derivatives of Inverse Trigonometric Functions</p>
-<p>ddxsin-1(x)=11-x2.</p>
-<p>ddxcos-1(x)=-11-x2.</p>
-<p>ddxtan-1(x)=11+x2.</p>
-<p>ddxcot-1(x)=-11+x2.</p>
-<p>ddxsec-1(x)=1xx2-1.</p>
-<p>ddxcsc-1(x)=-1xx2-1.</p>
-<p>Alternative Notation</p>
-<p>sin-1x=arcsinx.</p>
-<p>cos-1(x)=arccosx.</p>
-<p>tan-1(x)=arctanx.</p>
-<p>cot-1(x)=arccotx.</p>
-<p>sec-1(x)=arcsecx.</p>
-<p>csc-1(x)=arccscx.</p>
-<p>Examples</p>
-<p>Differentiate the following functions</p>
-<p>ft=4 cos-1t-10 tan-1(t).</p>
-<p>y=z sin-1z.</p>
-<p>Solution</p>
-<p>f't=-41-t2-101+t2.</p>
-<p>y'=12z-1/2 sin-1z+z1-z2.</p>
-<p>2.6 Derivatives of Hyperbolic Functions</p>
-<p>In many physical situations, combinations of ex and e-x arise often.</p>
-<p>Because of this, these combinations are given names.</p>
-<p>There are six hyperbolic functions and they are defined as follows:</p>
-<p>sinhx=ex-e-x2.</p>
-<p>coshx=ex+e-x2.</p>
-<p>tanh(x)=sinh(x)cosh(x).</p>
-<p>coth(x)=cosh(x)sinh(x)=1tanh(x).</p>
-<p>sech(x)=1cosh(x).</p>
-<p>csch(x)=1sinh(x).</p>
-<p>We also have the following facts about the hyperbolic functions:</p>
-<p>sinh(-x)=-sinhx.</p>
-<p>cosh-x=cosh(x).</p>
-<p>cosh2x-sinh2x=1.</p>
-<p>1-tanh2x=sech2x.</p>
-<p>You will note that these are similar, but not quite the same, to some of the more common trigonometric identities.</p>
-<p>Because the hyperbolic functions are defined in terms of exponential functions finding their derivatives is simple.</p>
-<p>With ddxex=ex and ddxe-x=-e-x, I hereby do the derivative for hyperbolic sine and leave the rest as an exercise:</p>
-<p>ddxsinh(x)=ddxex-e-x2=ex-(-e-x)2=ex+e-x2=cosh(x).</p>
-<p>For the rest, we can either use the definition of the hyperbolic function and/or the quotient rule.</p>
-<p>All the six derivatives are as below:</p>
-<p>ddxsinh(x)=cosh(x).</p>
-<p>ddxcoshx=sinhx.</p>
-<p>ddxtanh(x)=sech2x.</p>
-<p>ddxcoth(x)=-csch2x.</p>
-<p>ddxsech(x)=-sechxtanhx.</p>
-<p>ddxcsch(x)=-cschxcothx.</p>
-<p>Examples</p>
-<p>Differentiate each of the following functions:</p>
-<p>2x5coshx.</p>
-<p>ht=sinh(t)t+1.</p>
-<p>Solution</p>
-<p>f'x=10x4coshx+2x5sinhx.</p>
-<p>h't=t+1cosht-sinh(t)(t+1)2.</p>
-<p>Derivatives of Inverse Hyperbolic Functions</p>
-<p>ddxsinh-1(x)=1x2+1;</p>
-<p>ddxcosh-1(x)=1x2-1;</p>
-<p>ddxtanh-1(x)=11-x2;</p>
-<p>Etc.</p>
-<p>Let me show only the first one in the example below.</p>
-<p>Example</p>
-<p>Show that ddxarcsinhx=11+x2.</p>
-<p>Solution</p>
-<p>Let y=arcsinhx=sinh-1(x).</p>
-<p>So, sinhy=x.</p>
-<p>Then, ddxsinhy=coshy×y'=1, and so</p>
-<p>y'=1coshy=11+sinh2(y)=11+x2.</p>
-<p>Exercise</p>
-<p>Use chain rule to differentiate the following</p>
-<p>Rz=5z-8.</p>
-<p>fx=sin3x2+x.</p>
-<p>ft=2t3+cos(t)50.</p>
-<p>hw=ew4-3w2+9.</p>
-<p>gx=ln(x-4+x4).</p>
-<p>y=sec(1-5x).</p>
-<p>pt=cos4t+cos(t4).</p>
-<p>Differentiate each of the following:</p>
-<p>Tx=tan-1(2x)31-3x2.</p>
-<p>y=x3+451-2x23.</p>
-<p>2.7 Maximum and Minimum Points</p>
-<p>You need to be able to find a stationary/critical point on a curve and decide whether it is a turning point (maximum or minimum) or a point of inflexion.</p>
-<p>When dydx=0, the gradient is zero and so you have a stationary point.</p>
-<p>Second Order Differentiation</p>
-<p>The 2nd differential measures the change in gradient and can help you decide whether a</p>
-<p>stationary point is a maximum, minimum or point of inflexion.</p>
-<p>If dydx=0 and d2ydx2&gt;0, then you have a minimum point.</p>
-<p>If dydx=0 and d2ydx2&lt;0, then you have a maximum point.</p>
-<p>If dydx=0 and d2ydx2=0, then you have a point of inflection.</p>
-<p>Example 1</p>
-<p>Find the stationary point on the curve y=x2-4x+2.</p>
-<p>Solution</p>
-<p>dydx=2x-4.</p>
-<p>We need to solve for dydx=0:</p>
-<p>2x-4.=0⟹x=2.</p>
-<p>Next, we find the value of y when x=2:</p>
-<p>y=x2-4x+2=22-42+2=-2.</p>
-<p>So, the stationary point is (2,-2).</p>
-<p>Next decide whether the stationary point is a maximum, minimum or point of inflexion:</p>
-<p>d2ydx2=2&gt;0.</p>
-<p>Hence the turning point is a minimum.</p>
-<p>Example 2</p>
-<p>Find the stationary point(s) on the curve f(x)=x3-3x2+4.</p>
-<p>Solution</p>
-<p>f'x=3x2-6x.</p>
-<p>Now,</p>
-<p>3x2-6x=0⇒3xx-2=0⇒x=0 or x=2.</p>
-<p>Next, we find the y-values.</p>
-<p>When x=0, y=4. Hence the stationary point is at (0,4).</p>
-<p>When x=2, y=0. Hence the stationary point is at (2,0).</p>
-<p>Next decide whether the stationary points are maximum, minimum or point of inflexion:</p>
-<p>f''x=6x-6.</p>
-<p>When x=0, f''x=-6&lt;0. Hence (0,4) is a maximum point.</p>
-<p>When x=2, f''x=6&gt;0. Hence (2,0) is a minimum point.</p>
-<p>Example 3</p>
-<p>Find the stationary point on the curve y=x3.</p>
-<p>Solution</p>
-<p>f'x=3x2.</p>
-<p>Now,</p>
-<p>3x2=0⇒x=0.</p>
-<p>The stationary point is thus at (0,0).</p>
-<p>d2ydx2=6x.</p>
-<p>The d2ydx2 is zero when x=0.</p>
-<p>Thus (0,0) is a point of inflection.</p>
-<p>Exercise</p>
-<p>Find the stationary points and determine whether they are maximum, minimum, or points of inflection for the following curves:</p>
-<p>y=-2x2+8x+7.</p>
-<p>y=3x2-12x+2.</p>
-<p>y=x2+8x-7.</p>
-<p>fx=13x3+3x2+9x-3.</p>
-<p>y=23x3-x2-12x+1.</p>
-<p>fx=x3-12x.</p>
-<p>y=-x3.</p>
-<p>fx=x3-6x2+12x.</p>
-<p>y=x3-32x2-18x+5.</p>
+<p>The chain rule handles a function inside another function: differentiate the outer function first, keep the inner expression, then multiply by the inner derivative.</p>
+<h2 id="worked-example-product">Worked example: product</h2>
+<p>Differentiate y = x² sin x.</p>
+<p>y′ = (2x)sin x + x² cos x.</p>
+<h2 id="worked-example-quotient">Worked example: quotient</h2>
+<p>For y = (x + 1)/(x − 1), x ≠ 1:</p>
+<p>y′ = [(1)(x − 1) − (x + 1)(1)]/(x − 1)² = −2/(x − 1)².</p>
+<h2 id="worked-example-chain">Worked example: chain</h2>
+<p>For y = (x² − 5)⁴, let u = x² − 5. Then dy/du = 4u³ and du/dx = 2x, so:</p>
+<p>dy/dx = 8x(x² − 5)³.</p>
+<h2 id="choosing-a-method">Choosing a method</h2>
+<ol>
+<li>A sum of terms? Use linearity and the basic rules on each term.</li>
+<li>A product? Use the product rule.</li>
+<li>A quotient? Use the quotient rule, or simplify first if possible.</li>
+<li>A nested expression? Use the chain rule. Products and chains may appear together.</li>
+</ol>
+<h2 id="common-errors">Common errors</h2>
+<ul>
+<li>The derivative of a product is not f′g′.</li>
+<li>In the quotient rule, the numerator order is f′g − fg′; reversing it changes the sign.</li>
+<li>Do not forget the square on the denominator.</li>
+<li>For a chain, omitting the inner derivative loses a factor.</li>
+</ul>
 <h2 id="active-recall">Active recall</h2>
-<div class="steps"><div class="steps-title">Worked solution — reveal it step by step</div><div class="step"><button type="button" class="step-head"><span class="step-no">1</span><span class="step-name">Retrieval practice</span></button><div class="step-body"></div></div><div class="step"><button type="button" class="step-head"><span class="step-no">2</span><span class="step-name">Step 2</span></button><div class="step-body"><p>Close or cover the notes. Write the key idea, method, or definitions you remember.</p>
-</div></div><div class="step"><button type="button" class="step-head"><span class="step-no">3</span><span class="step-name">Step 3</span></button><div class="step-body"><p>Reopen the notes and correct your recall in a different color. Add weak points to the progress tracker.</p>
-</div></div><div class="steps-tools"><button type="button" class="steps-all">Reveal all steps</button></div></div>
+<ol>
+<li>Differentiate y = (3x + 1)(x² − 2).</li>
+<li>Differentiate y = (2x − 1)³.</li>
+<li>State one way to check a quotient-rule result.</li>
+</ol>
+<p><strong>Check:</strong> y′ = 9x² + 2x − 6; y′ = 6(2x − 1)²; differentiate the result independently or test with a numerical slope.</p>
 <div class="practice-links"><span>Practise this topic:</span><a href="../practice/QUESTION_BANK.html">Question bank</a></div>
 
   </article>
@@ -267,7 +87,7 @@
 </main>
 <aside class="toc">
   <div class="toc-title">On this page</div>
-  <a href="#learning-checks">Learning checks</a><a href="#course-notes">Course notes</a><a href="#active-recall">Active recall</a>
+  <a href="#product-quotient-and-chain-rules">Product, quotient, and chain rules</a><a href="#worked-example-product">Worked example: product</a><a href="#worked-example-quotient">Worked example: quotient</a><a href="#worked-example-chain">Worked example: chain</a><a href="#choosing-a-method">Choosing a method</a><a href="#common-errors">Common errors</a><a href="#active-recall">Active recall</a>
 </aside>
 </div>
 <div class="search-overlay" id="searchOverlay" hidden>

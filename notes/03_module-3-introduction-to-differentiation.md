@@ -1,169 +1,49 @@
 # 03 · Module 3 — Introduction to Differentiation
 
-> Source: Module 3.txt. This page is searchable, and the checklist state is saved in this browser.
+![Source illustration from Calculus Module 3](../assets/figures/module-3-image1.png)
 
-## Learning checks
+> Source: Calculus Module 4. Differentiation measures instantaneous change and gives the slope of a curve’s tangent.
 
-- [ ] Identify the key terms and explain them without looking.
-- [ ] Summarize the main idea in your own words.
-- [ ] Work through an example or answer a related question.
+## Core rules
 
-## Course notes
+For a constant c and a real power n:
 
-Department of Mathematics and Statistics
+- d/dx(c) = 0
+- d/dx(xⁿ) = n xⁿ⁻¹
+- d/dx(c f) = c f′
+- d/dx(f ± g) = f′ ± g′
 
-MODULE 4
+Differentiate term by term after rewriting roots and reciprocals as powers, where defined. The derivative f′(x) gives the instantaneous rate of change at x; its sign indicates local increase (positive) or decrease (negative).
 
-COURSE CODE: CSC 114                  COURSE TITLE: Differential and integral Calculus
+## Worked example: polynomial
 
-CHAPTER TWO
+Let f(x) = 5x⁴ − 3x² + 7x − 6.
 
-DIFFERENTIATION
+f′(x) = 20x³ − 6x + 7.
 
-2.1 Introduction
+At x = 1, f′(1) = 20 − 6 + 7 = 21, so the instantaneous rate of change there is 21.
 
-Formulas
+## Worked example: tangent line
 
-If fx=c, then f'x=ddxc=0, i.e., the derivative of a constant is zero.
+Find the tangent to f(x) = x² at x = 3. The derivative is f′(x) = 2x, so the tangent slope is 6. The point on the curve is (3, 9):
 
-If fx=xn, then f'x=ddxxn=nxn-1, where n is any number. This method is called the power rule.
+y − 9 = 6(x − 3), so y = 6x − 9.
 
-Properties
+## Practical interpretation
 
-f(x)±g(x)'=f'x+g'x OR ddxf(x)±g(x)=dfdx±dgdx.
+If V(t) is a volume, then V′(t) > 0 means the volume is increasing at that instant; V′(t) < 0 means it is decreasing. Units also change: if V is in litres and t in minutes, V′ is in litres per minute.
 
-cf(x)'=cf'x OR ddxcf(x)=cdfdx, where c is a constant.
+## Common errors
 
-Examples
-
-Differentiate each of the following functions
-
-fx=15x100-3x12+5x-46.
-
-gt=2t6+7t-6.
-
-y=8z3-13z5+z-23.
-
-Tx=x+93x7-25x2.
-
-hx=xπ-x2.
-
-y=3x22x-x2.
-
-ht=2t5+t2-5t2.
-
-Some Interpretations of Derivatives
-
-Example 1
-
-Is fx=2x3+300x3+4 increasing, decreasing, or not changing at x=-2?
-
-Solution
-
-Note that the rate of change of a function is given by the function’s derivative. Thus
-
-fx=2x3+300x-3+4⟹f'x=6x2-900x-4=6x2-900x4.
-
-Therefore,
-
-f'-2=6(-2)2-900-24=-32.25.
-
-So, at x=-2, the derivative is negative and so the function is decreasing at x=-2.
-
-Example 2
-
-Find the equation of the tangent line to fx=4x-8x at x=16.
-
-Solution
-
-The slope of the tangent line is given by the derivative of the function. Thus
-
-fx=4x-8x12⇒f'x=4-4x-12=4-4x12=4-4x.
-
-Therefore,
-
-f'x=4-416=4-1=3.
-
-Note that at x=16, fx=416-816=64-84=32.
-
-Therefore, the line passes through (16,32).
-
-Let (x,y) be another point on the line, then
-
-Slope=∆y∆x=y-32x-16=3⟹y-32=3x-16
-
-⟹y=3x-48+32
-
-⇒y=3x-16,
-
-which is the equation of the tangent line.
-
-2.2 Methods of Differentiation
-
-Product Rule
-
-If two functions f(x) and g(x) are differentiable (i.e. the derivative exist), then the product is differentiable and,
-
-(fg)'=f'g+fg'.
-
-Quotient Rule
-
-If two functions f(x) and g(x) are differentiable (i.e. the derivative exist), then the quotient is differentiable and,
-
-fg'=f'g-fg'g2.
-
-Examples
-
-Differentiate each of the following functions:
-
-y=3x22x-x2.
-
-fx=6x3-x10-20x.
-
-wz=3z+92-z.
-
-hx=4xx2-2.
-
-Chain Rule
-
-If y is a function of u, i.e. y=f(u), and u is a function of x, i.e. u=g(x), then the derivative of y with respect to x is
-
-dydx=dydu×dudx.
-
-Example
-
-Differentiate y=(x2-5)4.
-
-Solution
-
-Let u=x2-5, therefore y=u4.
-
-Thus,
-
-dudx=2x  and dydu=4u3.
-
-Using chain rule, we get
-
-dydx=dydu×dudx=4u3×2x=8xu3=8x(x2-5)3.
-
-Application Problem on Derivatives
-
-Suppose that the amount of air in a balloon at any time t is given by Vt=63t4t+1. Determine if the balloon is being filled with air or being drained of air at t=8.
-
-Solution
-
-Note that if the balloon is being filled with air, then the volume is increasing (value of the derivative is positive at that time) and if it being drained of air, then the volume is decreasing (value of the derivative is negative at that time).
-
-On differentiation and substituting for t=8, V'8=-632178.
-
-Hence the volume is decreasing.
+- The power rule reduces the exponent by one: d/dx(x⁵) = 5x⁴, not 5x⁵.
+- A constant term differentiates to zero.
+- For a tangent line, use both the derivative (slope) and the function value (point).
+- A negative derivative means decreasing locally; it does not by itself prove the function is negative.
 
 ## Active recall
 
-:::steps
-## Retrieval practice
----
-Close or cover the notes. Write the key idea, method, or definitions you remember.
----
-Reopen the notes and correct your recall in a different color. Add weak points to the progress tracker.
-:::
+1. Differentiate 4x³ − 2x + 9.
+2. Find the tangent to y = x² + 1 at x = 2.
+3. What does a negative derivative say about a quantity’s instantaneous change?
+
+**Check:** 12x² − 2; y = 4x − 2; the quantity is decreasing at that instant.

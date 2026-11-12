@@ -1,133 +1,55 @@
 # 05 · Module 5 — Applications of Differentiation
 
-> Source: Module 5.txt. This page is searchable, and the checklist state is saved in this browser.
+![Source illustration from Calculus Module 5](../assets/figures/module-5-image1.png)
 
-## Learning checks
+> Sources: Calculus Modules 5–6. This module covers standard derivative families, curve behaviour, extrema, and Newton–Raphson approximation.
 
-- [ ] Identify the key terms and explain them without looking.
-- [ ] Summarize the main idea in your own words.
-- [ ] Work through an example or answer a related question.
+## Standard derivative families
 
-## Course notes
+Use the chain rule when the input is not simply x.
 
-Department of Mathematics and Statistics
+- Trigonometric: (sin x)′ = cos x; (cos x)′ = −sin x; (tan x)′ = sec²x
+- Also: (cot x)′ = −csc²x; (sec x)′ = sec x tan x; (csc x)′ = −csc x cot x
+- Exponential/logarithmic: (eˣ)′ = eˣ; (aˣ)′ = aˣ ln a; (ln x)′ = 1/x for x > 0
+- Inverse trig: (arcsin x)′ = 1/√(1 − x²); (arccos x)′ = −1/√(1 − x²); (arctan x)′ = 1/(1 + x²); (arccot x)′ = −1/(1 + x²)
+- Also: (arcsec x)′ = 1/(|x|√(x² − 1)); (arccsc x)′ = −1/(|x|√(x² − 1))
+- Hyperbolic: (sinh x)′ = cosh x; (cosh x)′ = sinh x; (tanh x)′ = sech²x
+- Also: (coth x)′ = −csch²x; (sech x)′ = −sech x tanh x; (csch x)′ = −csch x coth x
+- Inverse hyperbolic: (arcsinh x)′ = 1/√(1 + x²); (arccosh x)′ = 1/√(x² − 1); (arctanh x)′ = 1/(1 − x²)
+- Variable powers: for x > 0, (xʳ)′ = r xʳ⁻¹ and (xˣ)′ = xˣ(ln x + 1)
 
-MODULE 6
+For example, d/dx[sin(3x)] = 3 cos(3x); d/dx[eˣ²] = 2x eˣ².
 
-COURSE CODE: CSC 114                   COURSE TITLE: Differential and integral Calculus
+## Stationary points and classification
 
-CHAPTER TWO
+A stationary point satisfies f′(x) = 0. Find its coordinates by solving f′ = 0 and substituting each x into f. At a stationary point:
 
-DIFFERENTIATION
+- f″(x) > 0: local minimum
+- f″(x) < 0: local maximum
+- f″(x) = 0: test inconclusive; inspect higher derivatives or the sign of f′ on each side.
 
-2.8 Newton-Raphson Method for Solving Equations
+**Worked example:** f(x) = x² − 4x + 2. Then f′ = 2x − 4 = 0 gives x = 2; f(2) = −2. Since f″ = 2 > 0, (2, −2) is a minimum.
 
-A method for finding the roots of an “arbitrary” function that uses the derivative was first circulated by Isaac Newton in 1669. John Wallis published Newton’s method in 1685, and in 1690 Joseph Raphson (1648–1715) published an improved version, the form we use today.
+## Newton–Raphson method
 
-The idea is as follows:
+To approximate a root of f(x) = 0, start with a reasonable x₀ and iterate:
 
-We are given a function, say fx=x3-4x2-x+2. A graph of this function shows that the function has three roots: near -1, 1, and 4 as shown in the figure below.
+xₙ₊₁ = xₙ − f(xₙ)/f′(xₙ).
 
-Those are not the exact values of the roots.
+Stop when consecutive values agree to the required accuracy and verify that f(xₙ) is small. The method can fail if f′(xₙ) = 0 or the starting value is poor.
 
-We us an iterative procedure that gets us progressively closer to the root.
+**Worked example:** For √10, solve f(x) = x² − 10 = 0. Then xₙ₊₁ = (xₙ + 10/xₙ)/2. Starting x₀ = 3 gives x₁ = 3.166667 and x₂ ≈ 3.162281, so √10 ≈ 3.1623.
 
-If xk is our guess and neither f(xk) nor f'(xk) is zero, then the next approximation will be
+## Common errors
 
-xk+1=xk-fxkf'xk.
-
-Now, suppose in the above f(x) we want to find the solution close to -1. The successive iterations (with ten-digit accuracy) are
-
-x2=-0.8;
-
-x3=-0.7628415301;
-
-x4=-0.7615586962;
-
-x5=-0.7615571818;
-
-x6=-0.7615571818.
-
-This is a very good approximation to the root as it is given up to 10 decimal places. This is the Newton-Raphson Method.
-
-To find the other two roots, we start closer to them.
-
-If the initial guess is not very accurate, it takes more iterative steps.
-
-Example 1
-
-Use the Newton-Raphson method, with 3 as starting point, to find a solution that is within 10-8 of 10.
-
-Solution
-
-The number 10 is the unique positive solution of the equation fx=0 where fx=x2-10.
-
-Let x0 be our initial estimate of the root and let xn be the n-th improved estimate.
-
-Note that f'x=2x.
-
-The Newton method recurrence is therefore,
-
-xn+1=xn-fxnf'xn=xn-xn2-102xn=xn-xn2+102xn=12xn+10xn.
-
-Starting with x0=3:
-
-x1=12x0+10x0=3.166666667;
-
-x2=12x1+10x1=3.162280702;
-
-x3=12x2+10x2=3.16227766;
-
-x4=12x3+10x3=3.16227766.
-
-We see that x3=x4 to 8 decimal places.
-
-Example 2
-
-Newton’s equation y3-2y-5=0 has a root near y=2. Starting with y0=2, compute y1, y2, and y3, the next three Newton-Raphson estimates for the root.
-
-Solution
-
-Let fy=y3-2y-5. Then f'y=3y2-2.
-
-Newton-Raphson method thus produces the recurrence:
-
-yn+1=yn-fynf'yn=yn-yn3-2yn-53yn2-2=2yn3+53yn2-2.
-
-Starting with y0=2, we have y1=2.1, y2=2.094568121, and y3=2.094551482.
-
-Example 3
-
-Find all solutions of e2x=x+6, correct to 4 decimal places. Use the Newton method.
-
-Solution
-
-Let fx=e2x-x-6.
-
-We want to find where fx=0.
-
-Note that f'x=2e2x-1. So, the Newton method iteration is
-
-xn+1=xn-e2xn-xn-62e2xn-1=2xn-1e2xn+62e2xn-1.
-
-We need to choose an initial estimate x0.
-
-Let x0=0.97. We then see that x1=0.970870836 and x2=0.97087002.
-
-Since x1 and x2 agree to 5 decimal places, then to 4 decimal places, the solution is 0.9709.
-
-Exercise
-
-Let fx=x2-a. Show that the Newton method leads to a recurrence
-
-xn+1=12xn+axn.
+- In a composite function, multiply by the derivative of the inner expression.
+- f″ = 0 alone does not prove a point of inflection or classify a stationary point.
+- Newton–Raphson requires a nonzero derivative at each iterate; do not round too early.
 
 ## Active recall
 
-:::steps
-## Retrieval practice
----
-Close or cover the notes. Write the key idea, method, or definitions you remember.
----
-Reopen the notes and correct your recall in a different color. Add weak points to the progress tracker.
-:::
+1. Differentiate y = ln(2x + 1).
+2. Classify the stationary point of y = −x² + 6x.
+3. Write one Newton step for f(x) = x³ − 2 starting at x₀ = 1.
+
+**Check:** 2/(2x + 1); a maximum at (3, 9), since y″ = −2; x₁ = 1 − (−1)/3 = 4/3.

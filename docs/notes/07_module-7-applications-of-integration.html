@@ -35,73 +35,38 @@
     </div>
   </div>
   <article class="content">
-<div class="page-tools"><span class="check-count" id="checkCount">0 / 3 done</span><button type="button" class="reset-btn" id="resetChecks">Reset checklist</button><button type="button" class="done-btn" id="markDone">Mark as done</button></div>
+<div class="page-tools"><button type="button" class="done-btn" id="markDone">Mark as done</button></div>
 <h1 id="07-module-7-applications-of-integration">07 · Module 7 — Applications of Integration</h1>
-<blockquote><p>Source: Module 7.txt. This page is searchable, and the checklist state is saved in this browser.</p></blockquote>
-<h2 id="learning-checks">Learning checks</h2>
+<p><img class="note-figure" src="../assets/figures/module-7-image1.png" alt="Source illustration from Calculus Module 7" loading="lazy" decoding="async"></p>
+<blockquote><p>Source: Calculus Module 8. Use integrals to measure area, accumulated quantities, and displacement.</p></blockquote>
+<h2 id="area-and-accumulation">Area and accumulation</h2>
+<p>If f(x) ≥ 0 on [a, b], the area under y = f(x) is ∫ₐᵇ f(x) dx. If the curve crosses the axis, split at each crossing and add the absolute areas.</p>
+<p>For an upper curve f and lower curve g:</p>
+<p>Area = ∫ₐᵇ [f(x) − g(x)] dx.</p>
+<p>First solve f(x) = g(x) to find intersection limits; if the curves swap order, split the interval.</p>
+<h2 id="worked-example-area-under-a-curve">Worked example: area under a curve</h2>
+<p>Find the area under y = x + 1 from x = 0 to x = 2. Since y is positive:</p>
+<p>Area = ∫₀² (x + 1) dx = [x²/2 + x]₀² = 4 square units.</p>
+<h2 id="accumulated-rate">Accumulated rate</h2>
+<p>If R(t) is a rate in litres per minute, ∫ₐᵇ R(t) dt is the amount accumulated in litres.</p>
+<p><strong>Worked example:</strong> Water flows at R(t) = 200 − 4t litres/minute. In the first 10 minutes:</p>
+<p>∫₀¹⁰ (200 − 4t) dt = [200t − 2t²]₀¹⁰ = 1,800 litres.</p>
+<h2 id="displacement-and-distance">Displacement and distance</h2>
+<p>For velocity v(t), displacement from a to b is ∫ₐᵇ v(t) dt. Net displacement may be negative. Total distance requires ∫ₐᵇ |v(t)| dt, so split where velocity changes sign.</p>
+<h2 id="common-errors">Common errors</h2>
 <ul>
-<li><label class="task"><input type="checkbox" class="task-check" id="task1" data-task="task1"> <span class="task-text">Identify the key terms and explain them without looking.</span></label> </li>
-<li><label class="task"><input type="checkbox" class="task-check" id="task2" data-task="task2"> <span class="task-text">Summarize the main idea in your own words.</span></label> </li>
-<li><label class="task"><input type="checkbox" class="task-check" id="task3" data-task="task3"> <span class="task-text">Work through an example or answer a related question.</span></label> </li>
+<li>Area between curves is top minus bottom (or right minus left for horizontal slices), not simply either function.</li>
+<li>An integral of velocity gives signed displacement, not automatically total distance.</li>
+<li>Check intersections and axis crossings before integrating over the whole interval.</li>
+<li>Attach squared units to area and the proper accumulated units to rate integrals.</li>
 </ul>
-<h2 id="course-notes">Course notes</h2>
-<p>Department of Mathematics and Statistics</p>
-<p>MODULE 8</p>
-<p>COURSE CODE: CSC 114                   COURSE TITLE: Differential and integral Calculus</p>
-<p>CHAPTER THREE</p>
-<p>INTEGRAL CALCULUS</p>
-<p>Application of Integration to Length, Area, and Volume</p>
-<p>Example 1</p>
-<p>Find the area of the region bounded by the graph of y=2x2-3x+2, the x-axis, and the vertical lines x=0 and x=2, as shown in the figure below.</p>
-<p>Solution</p>
-<p>Note that y&gt;0 on the interval [0,2].</p>
-<p>Area=022x2-3x+2dx=103.</p>
-<p>Example 2</p>
-<p>Water flows from a storage tank at the rate of Rt=200-4t litres per minute, where t∈[0,50]. Find the total amount of water that flows out of the tank in the first ten minutes.</p>
-<p>Solution</p>
-<p>010(200-4t)dt=200t-2t2010=1800.</p>
-<p>Therefore, a total of 1,800 litres flow out over the first ten minutes.</p>
-<p>Example 3</p>
-<p>The velocity of a particle moving along the x-axis is vt=t2-2t-8 metres per second, where t≥0. Find the displacement of the particle over the interval [1,6].</p>
-<p>Solution</p>
-<p>16(t2-2t-8)dt=13t3-t2-8t16=-103.</p>
-<p>The object moved 103 metres to the left.</p>
-<p>Area Between Curves</p>
-<p>If f(x) is above the x-axis on the interval [a,b], then abf(x)dx gives the area between the function and the axis on that interval, i.e.</p>
-<p>The area of the shaded part below is given by abf(x)dx.</p>
-<p>Area between two functions can also be found by taking the integral of the difference function, i.e., the area between the functions f(x) and g(x) on the interval [a,b] is</p>
-<p>ab[fx-g(x)]dx.</p>
-<p>That is, ab[fx-g(x)]dx is the area of the shaded part below.</p>
-<p>Example 1</p>
-<p>Find the area enclosed by the graphs of y=1+x and y=3+x3.</p>
-<p>Solution</p>
-<p>Sketch the graph:</p>
-<p>Find the points of intersection, i.e., solve for</p>
-<p>1+x=3+x3.</p>
-<p>This gives x=0 and x=9.</p>
-<p>The area between the curves is thus</p>
-<p>091+x-3+x3dx=4.5.</p>
-<p>Example 2</p>
-<p>Find the area below fx=-x2+4x+3 and above gx=-x3+7x2-10x+5 over the interval 1≤x≤2.</p>
-<p>Solution</p>
-<p>The area needed is the shaded one below:</p>
-<p>It is calculated as</p>
-<p>12[fx-g(x)]dx=4912.</p>
-<p>Example 3</p>
-<p>Find the area between fx=-x2+4x and gx=x2-6x+5 over the interval 0≤x≤1.</p>
-<p>Solution</p>
-<p>Sketch</p>
-<p>Since the two curves cross, we need to compute the two areas and add them.</p>
-<p>First, we find the intersection point:</p>
-<p>-x2+4x=x2-6x+5⟹x=5±152.</p>
-<p>The intersection point we want is x=5-152≡a.</p>
-<p>0ax2-6x+5--x2+4xdx+a1-x2+4x-x2-6x+5dx=-523+515.</p>
-<p>Exercise</p>
-<p>Sketch the region bounded by the graphs fx=x+1 and gx=12x+1, hence find the area of the enclosed region.</p>
 <h2 id="active-recall">Active recall</h2>
-<div class="steps"><div class="steps-title">Worked solution — reveal it step by step</div><div class="step"><button type="button" class="step-head"><span class="step-no">1</span><span class="step-name">Retrieval practice</span></button><div class="step-body"></div></div><div class="step"><button type="button" class="step-head"><span class="step-no">2</span><span class="step-name">Step 2</span></button><div class="step-body"><p>Close or cover the notes. Write the key idea, method, or definitions you remember.</p>
-</div></div><div class="step"><button type="button" class="step-head"><span class="step-no">3</span><span class="step-name">Step 3</span></button><div class="step-body"><p>Reopen the notes and correct your recall in a different color. Add weak points to the progress tracker.</p>
-</div></div><div class="steps-tools"><button type="button" class="steps-all">Reveal all steps</button></div></div>
+<ol>
+<li>Find the area under y = 2x on [0, 3].</li>
+<li>What does integrating a flow rate over time produce?</li>
+<li>When must a velocity integral be split to calculate total distance?</li>
+</ol>
+<p><strong>Check:</strong> 9 square units; total accumulated volume; at every zero where velocity changes sign.</p>
 <div class="practice-links"><span>Practise this topic:</span><a href="../practice/QUESTION_BANK.html">Question bank</a></div>
 
   </article>
@@ -112,7 +77,7 @@
 </main>
 <aside class="toc">
   <div class="toc-title">On this page</div>
-  <a href="#learning-checks">Learning checks</a><a href="#course-notes">Course notes</a><a href="#active-recall">Active recall</a>
+  <a href="#area-and-accumulation">Area and accumulation</a><a href="#worked-example-area-under-a-curve">Worked example: area under a curve</a><a href="#accumulated-rate">Accumulated rate</a><a href="#displacement-and-distance">Displacement and distance</a><a href="#common-errors">Common errors</a><a href="#active-recall">Active recall</a>
 </aside>
 </div>
 <div class="search-overlay" id="searchOverlay" hidden>

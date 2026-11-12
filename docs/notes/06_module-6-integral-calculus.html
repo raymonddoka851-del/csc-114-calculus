@@ -35,82 +35,45 @@
     </div>
   </div>
   <article class="content">
-<div class="page-tools"><span class="check-count" id="checkCount">0 / 3 done</span><button type="button" class="reset-btn" id="resetChecks">Reset checklist</button><button type="button" class="done-btn" id="markDone">Mark as done</button></div>
+<div class="page-tools"><button type="button" class="done-btn" id="markDone">Mark as done</button></div>
 <h1 id="06-module-6-integral-calculus">06 · Module 6 — Integral Calculus</h1>
-<blockquote><p>Source: Module 6.txt. This page is searchable, and the checklist state is saved in this browser.</p></blockquote>
-<h2 id="learning-checks">Learning checks</h2>
+<p><img class="note-figure" src="../assets/figures/module-6-image1.png" alt="Source illustration from Calculus Module 6" loading="lazy" decoding="async"></p>
+<blockquote><p>Source: Calculus Module 7. Integration reverses differentiation; a definite integral accumulates signed change over an interval.</p></blockquote>
+<h2 id="indefinite-integrals">Indefinite integrals</h2>
+<p>An antiderivative F of f satisfies F′(x) = f(x). All antiderivatives differ by a constant:</p>
+<p>∫ f(x) dx = F(x) + C.</p>
+<p>Core rules:</p>
 <ul>
-<li><label class="task"><input type="checkbox" class="task-check" id="task1" data-task="task1"> <span class="task-text">Identify the key terms and explain them without looking.</span></label> </li>
-<li><label class="task"><input type="checkbox" class="task-check" id="task2" data-task="task2"> <span class="task-text">Summarize the main idea in your own words.</span></label> </li>
-<li><label class="task"><input type="checkbox" class="task-check" id="task3" data-task="task3"> <span class="task-text">Work through an example or answer a related question.</span></label> </li>
+<li>∫ k dx = kx + C</li>
+<li>∫ xⁿ dx = xⁿ⁺¹/(n + 1) + C, for n ≠ −1</li>
+<li>∫ 1/x dx = ln|x| + C</li>
+<li>∫ eˣ dx = eˣ + C; ∫ eᵏˣ dx = eᵏˣ/k + C (k ≠ 0)</li>
+<li>Integrals distribute over sums and constant factors.</li>
 </ul>
-<h2 id="course-notes">Course notes</h2>
-<p>Department of Mathematics and Statistics</p>
-<p>MODULE 7</p>
-<p>COURSE CODE: CSC 114                 COURSE TITLE: Differential and integral Calculus</p>
-<p>CHAPTER THREE</p>
-<p>INTEGRAL CALCULUS</p>
-<p>3.1 Integration as the Inverse of Differentiation</p>
-<p>In the previous topic, we have studied differentiating common functions through use of various techniques of differentiation. In this topic, we carry out the process of differentiation in reverse. That is, we start with a given function, say f(x), and ask what function or functions, F(x), would have f(x) as  their derivative. This leads us to the concepts of an antiderivative and integration.</p>
-<p>Antiderivative – Differentiation in Reverse</p>
-<p>Definition: A function F is called an antiderivative of f on an interval if F'x=f(x) for all x in that interval.</p>
-<p>Result: If F is an antiderivative of f on an interval, then the most general antiderivative of f on that interval is Fx+C, where C is an arbitrary constant.</p>
-<p>Definition: The set of all antiderivatives of the function f on an interval is called the indefinite integral of f and is denoted f(x)dx, read “the integral of fx, dx”.</p>
-<p>Thus,</p>
-<p>f(x)dx=Fx+C,</p>
-<p>Where F is an antiderivative of f and C is an arbitrary constant called the constant of integration.</p>
-<p>The symbol ∫is called the integral sign and f(x) is called the integrand.</p>
-<p>The symbol dx has no official meaning by itself. Its purpose is to show which variable the integral is with respect to. Note that the integral sign must always be written with dx.</p>
-<p>Definition: The process of finding an antiderivative is called integration.</p>
-<p>Example</p>
-<p>Find x7dx.</p>
-<p>Solution</p>
-<p>An antiderivative of x7 is 18x8.</p>
-<p>Hence</p>
-<p>x7dx=18x8+C.</p>
-<p>Note that we can check this result by differentiating:</p>
-<p>Fx=18x8+C⟹F'x=x7.</p>
-<p>Note: The derivative of a constant (in this case C) is zero.</p>
-<p>Basic Integration Formulae / Standard Forms</p>
-<p>1dx=x+C.</p>
-<p>kdx=kx+C, where k is any constant.</p>
-<p>xndx=1n+1xn+1+C, for n≠-1.</p>
-<p>x-1dx=1xdx=lnx+C.</p>
-<p>exdx=ex+C.</p>
-<p>ekxdx=1kekx+C, where k is any constant.</p>
-<p>kf(x)dx=kf(x)dx, where k is any constant.</p>
-<p>f(x)±g(x)dx=f(x)dx±g(x)dx.</p>
-<p>Exercise</p>
-<p>Find</p>
-<p>4x3+6x2-7x+3dx.</p>
-<p>3x1/2+2x2/3+4x-2+3x-1/2dx.</p>
-<p>6x-53x+23x2-3dx.</p>
-<p>4x+5x2+6x3+73xdx.</p>
-<p>3x+e2x+5e-4x-7e3xdx.</p>
-<p>x2-5x+2xdx.</p>
-<p>9x3+8x2+3x-43x3dx.</p>
-<p>3.2 Definite Integrals</p>
-<p>The quantity abf(x)dx is called the definite integral of f(x) from a to b.</p>
-<p>The number a and b are known as the lower and upper limits of the integral.</p>
-<p>Evaluating Definite Integrals</p>
-<p>Example 1</p>
-<p>Find 14x2dx.</p>
-<p>Solution</p>
-<p>14x2dx=x33+C14=Evaluate at upper limit-Evaluate at lower limit</p>
-<p>=433+C-133+C=643-13</p>
-<p>=21.</p>
-<p>Example 2</p>
-<p>Find -23x3dx.</p>
-<p>Solution</p>
-<p>-23x3dx=x44-23=344--244=16.25.</p>
-<p>Example 3</p>
-<p>Find 0π/2cos(x)dx.</p>
-<p>Solution</p>
-<p>0π/2cos(x)dx=sin(x)0π/2=sinπ2-sin0=1-0=1.</p>
+<h2 id="worked-example-reverse-the-power-rule">Worked example: reverse the power rule</h2>
+<p>∫(6x² − 4x + 3) dx = 2x³ − 2x² + 3x + C.</p>
+<p>Differentiate the answer to check: 6x² − 4x + 3.</p>
+<h2 id="definite-integrals">Definite integrals</h2>
+<p>If F′ = f, the Fundamental Theorem gives:</p>
+<p>∫ₐᵇ f(x) dx = F(b) − F(a) = [F(x)]ₐᵇ.</p>
+<p>The integration constant cancels, so do not add + C to a definite-integral answer.</p>
+<p><strong>Worked example:</strong> ∫₁³ 2x dx = [x²]₁³ = 9 − 1 = 8.</p>
+<h2 id="interpretation">Interpretation</h2>
+<p>A definite integral is signed accumulation: area above the axis contributes positively; area below contributes negatively. Units are “output units × input units.”</p>
+<h2 id="common-errors">Common errors</h2>
+<ul>
+<li>For powers, divide by the new exponent n + 1; the formula excludes n = −1.</li>
+<li>Keep + C for indefinite integrals.</li>
+<li>Evaluate upper limit minus lower limit, not the reverse.</li>
+<li>∫ₐᵇ f can be negative, even though geometric area is nonnegative.</li>
+</ul>
 <h2 id="active-recall">Active recall</h2>
-<div class="steps"><div class="steps-title">Worked solution — reveal it step by step</div><div class="step"><button type="button" class="step-head"><span class="step-no">1</span><span class="step-name">Retrieval practice</span></button><div class="step-body"></div></div><div class="step"><button type="button" class="step-head"><span class="step-no">2</span><span class="step-name">Step 2</span></button><div class="step-body"><p>Close or cover the notes. Write the key idea, method, or definitions you remember.</p>
-</div></div><div class="step"><button type="button" class="step-head"><span class="step-no">3</span><span class="step-name">Step 3</span></button><div class="step-body"><p>Reopen the notes and correct your recall in a different color. Add weak points to the progress tracker.</p>
-</div></div><div class="steps-tools"><button type="button" class="steps-all">Reveal all steps</button></div></div>
+<ol>
+<li>Find ∫(4x³ + 2/x) dx.</li>
+<li>Evaluate ∫₀² (3x² + 1) dx.</li>
+<li>Why is there no + C in a definite integral?</li>
+</ol>
+<p><strong>Check:</strong> x⁴ + 2 ln|x| + C; [x³ + x]₀² = 10; the constants cancel when F(b) − F(a) is formed.</p>
 <div class="practice-links"><span>Practise this topic:</span><a href="../practice/QUESTION_BANK.html">Question bank</a></div>
 
   </article>
@@ -121,7 +84,7 @@
 </main>
 <aside class="toc">
   <div class="toc-title">On this page</div>
-  <a href="#learning-checks">Learning checks</a><a href="#course-notes">Course notes</a><a href="#active-recall">Active recall</a>
+  <a href="#indefinite-integrals">Indefinite integrals</a><a href="#worked-example-reverse-the-power-rule">Worked example: reverse the power rule</a><a href="#definite-integrals">Definite integrals</a><a href="#interpretation">Interpretation</a><a href="#common-errors">Common errors</a><a href="#active-recall">Active recall</a>
 </aside>
 </div>
 <div class="search-overlay" id="searchOverlay" hidden>

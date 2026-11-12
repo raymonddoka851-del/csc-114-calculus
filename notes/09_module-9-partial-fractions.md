@@ -1,121 +1,47 @@
-# 09 · Module 9 — Partial Fractions
+# 09 · Module 9 — Integration by Partial Fractions
 
-> Source: Module 9.txt. This page is searchable, and the checklist state is saved in this browser.
+> Source: Calculus Module 10. Decompose a rational function into simpler fractions, then integrate logarithmic forms.
 
-## Learning checks
+![Source illustration from Calculus Module 9](../assets/figures/module-9-image1.png)
 
-- [ ] Identify the key terms and explain them without looking.
-- [ ] Summarize the main idea in your own words.
-- [ ] Work through an example or answer a related question.
+## When and how
 
-## Course notes
+A rational function is a polynomial divided by a polynomial. If its numerator degree is at least the denominator degree, perform polynomial division first. Then:
 
-Department of Mathematics and Statistics
+1. Factor the denominator completely.
+2. Write a partial-fraction form matching its factors.
+3. Clear denominators and solve for the unknown constants.
+4. Integrate each term; check by recombining or differentiating.
 
-MODULE 10
+For distinct linear factors (x − a)(x − b), write A/(x − a) + B/(x − b). For a repeated factor (x − a)², include A/(x − a) + B/(x − a)². Irreducible quadratics need a linear numerator.
 
-COURSE CODE: CSC 114                 COURSE TITLE: Differential and integral Calculus
+## Worked example: distinct factors
 
-CHAPTER FOUR
+Decompose 1/[(x + 1)(x − 2)]:
 
-TECHNIQUES OF INTEGRATION
+1 = A(x − 2) + B(x + 1).
 
-4.3 Integration of Rational Functions by Partial Fractions
+Setting x = 2 gives B = 1/3; setting x = −1 gives A = −1/3. Therefore:
 
-A rational function is a fraction with polynomials in the numerator and denominator. For example, x3x2+x-6, 1x-32, x2+1x2-1, etc., are all rational functions.
+1/[(x + 1)(x − 2)] = −1/[3(x + 1)] + 1/[3(x − 2)].
 
-There is a general technique called partial fractions that allows us to integrate any rational function.
+So its integral is (1/3)ln|x − 2| − (1/3)ln|x + 1| + C.
 
-Example 1
+## Logarithm check
 
-Integrate
+∫1/(x − a) dx = ln|x − a| + C. Absolute values are needed on intervals that do not cross the singularity.
 
-xdxx-1x-2.
+## Common errors
 
-Solution
-
-First, we write:
-
-xx-1x-2=Ax-1+Bx-2=Ax-2+B(x-1)(x-1)(x-2).
-
-The above implies:
-
-x=Ax-2+Bx-1=A+Bx-2A-B.
-
-From which we obtain the following system of equations:
-
-A+B=1;
-
--2A-B=0.
-
-Solving the above simultaneous equations, we obtain A=-1 and B=2.
-
-Therefore,
-
-xdxx-1x-2=-1x-1dx+2x-2dx
-
-=-1x-1dx+21x-2dx
-
-=-lnx-1+2lnx-2+c
-
-=lnx-22x-1+c.
-
-Example 2
-
-Integrate
-
-x2-3(x2-1)(x-3)dx.
-
-Solution
-
-Note that
-
-x2-3x2-1x-3=x2-3x+1x-1x-3=Ax+1+Bx-1+Cx-3
-
-=Ax-1x-3+Bx+1x-3+C(x+1)(x-1)(x+1)(x-1)(x-3).
-
-The above leads to
-
-x2-3=Ax-1x-3+Bx+1x-3+Cx+1x-1.
-
-Solving the above equation, we obtain: A=-14; B=12; and C=34.
-
-Therefore,
-
-x2-3x2-1x-3dx=-141x+1dx+121x-1dx+341x-3dx
-
-=-14lnx+1+12lnx-1+34lnx-3+c.
-
-Example 3
-
-Evaluate
-
-dxx2-4x-5.
-
-Solution
-
-Here, we can factor x2-4x-5=(x+1)(x-5), so we can write:
-
-1x2-4x-5=1(x+1)(x-5)=Ax+1+Bx-5,
-
-And solve for A and B as above, to obtain: A=1/6 and B=-1/6.
-
-So, we have:
-
-dxx2-4x-5=161x+1dx-161x-5dx
-
-=16lnx+1-16lnx-5+c
-
-=16lnx+1-lnx-5+c
-
-=16lnx+1x-5+c.
+- Factor the denominator fully before choosing the decomposition.
+- Include every power for repeated linear factors.
+- Solve for constants carefully; substitution at roots is a quick check.
+- Keep absolute values in logarithms, and exclude points where the denominator is zero.
 
 ## Active recall
 
-:::steps
-## Retrieval practice
----
-Close or cover the notes. Write the key idea, method, or definitions you remember.
----
-Reopen the notes and correct your recall in a different color. Add weak points to the progress tracker.
-:::
+1. What is the correct form for A/[(x − 1)(x + 3)]?
+2. Decompose 1/[(x − 1)(x + 1)].
+3. Why do we use ln|x| rather than only ln x when integrating 1/x?
+
+**Check:** A/(x − 1) + B/(x + 3); 1/2·1/(x − 1) − 1/2·1/(x + 1); the antiderivative is defined on either side of zero, with zero excluded.

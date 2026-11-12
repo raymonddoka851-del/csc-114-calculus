@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>09 · Module 9 — Partial Fractions · CSC 114 Revision</title>
+<title>09 · Module 9 — Integration by Partial Fractions · CSC 114 Revision</title>
 <meta name="description" content="Study notes for CSC 114 Differential and Integral Calculus, arranged by module and the course outline.">
 <link rel="stylesheet" href="../assets/notes.css">
 <link rel="stylesheet" href="../assets/theme.css">
@@ -35,70 +35,41 @@
     </div>
   </div>
   <article class="content">
-<div class="page-tools"><span class="check-count" id="checkCount">0 / 3 done</span><button type="button" class="reset-btn" id="resetChecks">Reset checklist</button><button type="button" class="done-btn" id="markDone">Mark as done</button></div>
-<h1 id="09-module-9-partial-fractions">09 · Module 9 — Partial Fractions</h1>
-<blockquote><p>Source: Module 9.txt. This page is searchable, and the checklist state is saved in this browser.</p></blockquote>
-<h2 id="learning-checks">Learning checks</h2>
+<div class="page-tools"><button type="button" class="done-btn" id="markDone">Mark as done</button></div>
+<h1 id="09-module-9-integration-by-partial-fractions">09 · Module 9 — Integration by Partial Fractions</h1>
+<blockquote><p>Source: Calculus Module 10. Decompose a rational function into simpler fractions, then integrate logarithmic forms.</p></blockquote>
+<p><img class="note-figure" src="../assets/figures/module-9-image1.png" alt="Source illustration from Calculus Module 9" loading="lazy" decoding="async"></p>
+<h2 id="when-and-how">When and how</h2>
+<p>A rational function is a polynomial divided by a polynomial. If its numerator degree is at least the denominator degree, perform polynomial division first. Then:</p>
+<ol>
+<li>Factor the denominator completely.</li>
+<li>Write a partial-fraction form matching its factors.</li>
+<li>Clear denominators and solve for the unknown constants.</li>
+<li>Integrate each term; check by recombining or differentiating.</li>
+</ol>
+<p>For distinct linear factors (x − a)(x − b), write A/(x − a) + B/(x − b). For a repeated factor (x − a)², include A/(x − a) + B/(x − a)². Irreducible quadratics need a linear numerator.</p>
+<h2 id="worked-example-distinct-factors">Worked example: distinct factors</h2>
+<p>Decompose 1/[(x + 1)(x − 2)]:</p>
+<p>1 = A(x − 2) + B(x + 1).</p>
+<p>Setting x = 2 gives B = 1/3; setting x = −1 gives A = −1/3. Therefore:</p>
+<p>1/[(x + 1)(x − 2)] = −1/[3(x + 1)] + 1/[3(x − 2)].</p>
+<p>So its integral is (1/3)ln|x − 2| − (1/3)ln|x + 1| + C.</p>
+<h2 id="logarithm-check">Logarithm check</h2>
+<p>∫1/(x − a) dx = ln|x − a| + C. Absolute values are needed on intervals that do not cross the singularity.</p>
+<h2 id="common-errors">Common errors</h2>
 <ul>
-<li><label class="task"><input type="checkbox" class="task-check" id="task1" data-task="task1"> <span class="task-text">Identify the key terms and explain them without looking.</span></label> </li>
-<li><label class="task"><input type="checkbox" class="task-check" id="task2" data-task="task2"> <span class="task-text">Summarize the main idea in your own words.</span></label> </li>
-<li><label class="task"><input type="checkbox" class="task-check" id="task3" data-task="task3"> <span class="task-text">Work through an example or answer a related question.</span></label> </li>
+<li>Factor the denominator fully before choosing the decomposition.</li>
+<li>Include every power for repeated linear factors.</li>
+<li>Solve for constants carefully; substitution at roots is a quick check.</li>
+<li>Keep absolute values in logarithms, and exclude points where the denominator is zero.</li>
 </ul>
-<h2 id="course-notes">Course notes</h2>
-<p>Department of Mathematics and Statistics</p>
-<p>MODULE 10</p>
-<p>COURSE CODE: CSC 114                 COURSE TITLE: Differential and integral Calculus</p>
-<p>CHAPTER FOUR</p>
-<p>TECHNIQUES OF INTEGRATION</p>
-<p>4.3 Integration of Rational Functions by Partial Fractions</p>
-<p>A rational function is a fraction with polynomials in the numerator and denominator. For example, x3x2+x-6, 1x-32, x2+1x2-1, etc., are all rational functions.</p>
-<p>There is a general technique called partial fractions that allows us to integrate any rational function.</p>
-<p>Example 1</p>
-<p>Integrate</p>
-<p>xdxx-1x-2.</p>
-<p>Solution</p>
-<p>First, we write:</p>
-<p>xx-1x-2=Ax-1+Bx-2=Ax-2+B(x-1)(x-1)(x-2).</p>
-<p>The above implies:</p>
-<p>x=Ax-2+Bx-1=A+Bx-2A-B.</p>
-<p>From which we obtain the following system of equations:</p>
-<p>A+B=1;</p>
-<p>-2A-B=0.</p>
-<p>Solving the above simultaneous equations, we obtain A=-1 and B=2.</p>
-<p>Therefore,</p>
-<p>xdxx-1x-2=-1x-1dx+2x-2dx</p>
-<p>=-1x-1dx+21x-2dx</p>
-<p>=-lnx-1+2lnx-2+c</p>
-<p>=lnx-22x-1+c.</p>
-<p>Example 2</p>
-<p>Integrate</p>
-<p>x2-3(x2-1)(x-3)dx.</p>
-<p>Solution</p>
-<p>Note that</p>
-<p>x2-3x2-1x-3=x2-3x+1x-1x-3=Ax+1+Bx-1+Cx-3</p>
-<p>=Ax-1x-3+Bx+1x-3+C(x+1)(x-1)(x+1)(x-1)(x-3).</p>
-<p>The above leads to</p>
-<p>x2-3=Ax-1x-3+Bx+1x-3+Cx+1x-1.</p>
-<p>Solving the above equation, we obtain: A=-14; B=12; and C=34.</p>
-<p>Therefore,</p>
-<p>x2-3x2-1x-3dx=-141x+1dx+121x-1dx+341x-3dx</p>
-<p>=-14lnx+1+12lnx-1+34lnx-3+c.</p>
-<p>Example 3</p>
-<p>Evaluate</p>
-<p>dxx2-4x-5.</p>
-<p>Solution</p>
-<p>Here, we can factor x2-4x-5=(x+1)(x-5), so we can write:</p>
-<p>1x2-4x-5=1(x+1)(x-5)=Ax+1+Bx-5,</p>
-<p>And solve for A and B as above, to obtain: A=1/6 and B=-1/6.</p>
-<p>So, we have:</p>
-<p>dxx2-4x-5=161x+1dx-161x-5dx</p>
-<p>=16lnx+1-16lnx-5+c</p>
-<p>=16lnx+1-lnx-5+c</p>
-<p>=16lnx+1x-5+c.</p>
 <h2 id="active-recall">Active recall</h2>
-<div class="steps"><div class="steps-title">Worked solution — reveal it step by step</div><div class="step"><button type="button" class="step-head"><span class="step-no">1</span><span class="step-name">Retrieval practice</span></button><div class="step-body"></div></div><div class="step"><button type="button" class="step-head"><span class="step-no">2</span><span class="step-name">Step 2</span></button><div class="step-body"><p>Close or cover the notes. Write the key idea, method, or definitions you remember.</p>
-</div></div><div class="step"><button type="button" class="step-head"><span class="step-no">3</span><span class="step-name">Step 3</span></button><div class="step-body"><p>Reopen the notes and correct your recall in a different color. Add weak points to the progress tracker.</p>
-</div></div><div class="steps-tools"><button type="button" class="steps-all">Reveal all steps</button></div></div>
+<ol>
+<li>What is the correct form for A/[(x − 1)(x + 3)]?</li>
+<li>Decompose 1/[(x − 1)(x + 1)].</li>
+<li>Why do we use ln|x| rather than only ln x when integrating 1/x?</li>
+</ol>
+<p><strong>Check:</strong> A/(x − 1) + B/(x + 3); 1/2·1/(x − 1) − 1/2·1/(x + 1); the antiderivative is defined on either side of zero, with zero excluded.</p>
 <div class="practice-links"><span>Practise this topic:</span><a href="../practice/QUESTION_BANK.html">Question bank</a></div>
 
   </article>
@@ -109,7 +80,7 @@
 </main>
 <aside class="toc">
   <div class="toc-title">On this page</div>
-  <a href="#learning-checks">Learning checks</a><a href="#course-notes">Course notes</a><a href="#active-recall">Active recall</a>
+  <a href="#when-and-how">When and how</a><a href="#worked-example-distinct-factors">Worked example: distinct factors</a><a href="#logarithm-check">Logarithm check</a><a href="#common-errors">Common errors</a><a href="#active-recall">Active recall</a>
 </aside>
 </div>
 <div class="search-overlay" id="searchOverlay" hidden>

@@ -35,113 +35,38 @@
     </div>
   </div>
   <article class="content">
-<div class="page-tools"><span class="check-count" id="checkCount">0 / 3 done</span><button type="button" class="reset-btn" id="resetChecks">Reset checklist</button><button type="button" class="done-btn" id="markDone">Mark as done</button></div>
+<div class="page-tools"><button type="button" class="done-btn" id="markDone">Mark as done</button></div>
 <h1 id="08-module-8-integration-by-substitution-and-parts">08 · Module 8 — Integration by Substitution and Parts</h1>
-<blockquote><p>Source: Module 8.txt. This page is searchable, and the checklist state is saved in this browser.</p></blockquote>
-<h2 id="learning-checks">Learning checks</h2>
+<p><img class="note-figure" src="../assets/figures/module-8-image1.png" alt="Source illustration from Calculus Module 8" loading="lazy" decoding="async"></p>
+<blockquote><p>Source: Calculus Module 9. Choose substitution for a nested expression and integration by parts for a product that simplifies after differentiating one factor.</p></blockquote>
+<h2 id="substitution">Substitution</h2>
+<p>This reverses the chain rule. Set u equal to an inner expression and replace its differential consistently:</p>
+<p>u = g(x), du = g′(x) dx.</p>
+<p>If the integral is definite, either convert both limits to u-values or return to x before applying the original limits.</p>
+<p><strong>Worked example:</strong> ∫2x cos(x²) dx. Set u = x², du = 2x dx:</p>
+<p>∫cos u du = sin u + C = sin(x²) + C.</p>
+<h2 id="integration-by-parts">Integration by parts</h2>
+<p>This reverses the product rule:</p>
+<p>∫u dv = uv − ∫v du.</p>
+<p>Choose u so its derivative is simpler, and dv so it can be integrated. A useful heuristic is to choose a logarithm or algebraic factor for u.</p>
+<p><strong>Worked example:</strong> ∫x sin x dx. Choose u = x, dv = sin x dx; then du = dx and v = −cos x:</p>
+<p>∫x sin x dx = −x cos x + ∫cos x dx = −x cos x + sin x + C.</p>
+<p>For ∫x² sin x dx, apply parts twice:</p>
+<p>∫x² sin x dx = −x² cos x + 2x sin x + 2 cos x + C.</p>
+<h2 id="common-errors">Common errors</h2>
 <ul>
-<li><label class="task"><input type="checkbox" class="task-check" id="task1" data-task="task1"> <span class="task-text">Identify the key terms and explain them without looking.</span></label> </li>
-<li><label class="task"><input type="checkbox" class="task-check" id="task2" data-task="task2"> <span class="task-text">Summarize the main idea in your own words.</span></label> </li>
-<li><label class="task"><input type="checkbox" class="task-check" id="task3" data-task="task3"> <span class="task-text">Work through an example or answer a related question.</span></label> </li>
+<li>Substitution must replace both the expression and its differential; do not leave mixed x and u variables.</li>
+<li>With definite substitution, change both limits or change back to x—not one without the other.</li>
+<li>The parts formula has a minus sign: uv − ∫v du.</li>
+<li>Check by differentiating the final antiderivative.</li>
 </ul>
-<h2 id="course-notes">Course notes</h2>
-<p>Department of Mathematics and Statistics</p>
-<p>MODULE 9</p>
-<p>COURSE CODE: CSC 114                  COURSE TITLE: Differential and integral Calculus</p>
-<p>CHAPTER FOUR</p>
-<p>TECHNIQUES OF INTEGRATION</p>
-<p>We have so far encountered simple problems of integration such as x10dx, cos(x)dx, e2xdx, etc.</p>
-<p>In this topic, we study various techniques of integrating some more advanced problems.</p>
-<p>4.1 Integration by Substitution</p>
-<p>Example 1</p>
-<p>Find 2xcosx2dx.</p>
-<p>Solution</p>
-<p>This is not a simple problem, but a little thought reveals that it must have come from an application of the chain rule.</p>
-<p>We proceed as follows:</p>
-<p>Let u=x2, then dudx=2x or du=2xdx.</p>
-<p>Since we have exactly 2xdx in the original integral, we can replace it by du, i.e.,</p>
-<p>2xcosx2dx=cos(u)du=sin(u)+c=sinx2+c.</p>
-<p>Example 2</p>
-<p>Evaluate ax+bndx assuming that a and b are constants, a≠0 and n is a positive integer.</p>
-<p>Solution</p>
-<p>Let u=ax+b. So, dudx=a⟹du=adx OR dx=dua. Then</p>
-<p>ax+bndx=1aundu=1a(n+1)un+1+c=1a(n+1)(ax+b)n+1+c.</p>
-<p>Example 3</p>
-<p>Evaluate sinax+bdx, assuming that a and b are constants and a≠0.</p>
-<p>Solution</p>
-<p>Again, we let u=ax+b. So, dudx=a⟹du=adx OR dx=dua. Thus,</p>
-<p>sinax+bdx=1asin(u)du=1a-cos(u)+c=-1acosax+b+c.</p>
-<p>Example 4</p>
-<p>Evaluate 24xsinx2dx.</p>
-<p>Solution</p>
-<p>Let u=x2, so du=2xdx OR xdx=du2.</p>
-<p>Thus,</p>
-<p>xsinx2dx=12sin(u)du=12-cos(u)+c=-12cosx2+c.</p>
-<p>Now,</p>
-<p>24xsinx2dx=-12cosx224=-12cos16+12cos4.</p>
-<p>Another alternative is to change the original limits to match the variable u.</p>
-<p>Since u=x2; when x=2, u=4; when x=4, u=16. So, we can write</p>
-<p>24xsinx2dx=41612sin(u)du=-12cosu416=-12cos16+12cos4.</p>
-<p>Example 5</p>
-<p>Evaluate</p>
-<p>1/41/2cos(πt)sin2(πt)dt.</p>
-<p>Solution</p>
-<p>Let u=cos(πt). So,</p>
-<p>dudt=πcos(πt) OR du=πcos(πt)dt OR duπ=cos(πt).</p>
-<p>We change the limits of integration as follows:</p>
-<p>When t=14, u=sinπ4=22. When t=12, u=sinπ2=1.</p>
-<p>1/41/2cos(πt)sin2(πt)dt=2/211π1u2du=2/211πu-2du=1πu-1-12/21=-1π+2π.</p>
-<p>4.2 Integration by Parts</p>
-<p>Start with the product rule:</p>
-<p>ddxfxgx=f'xgx+fxg'x.</p>
-<p>We can rewrite this as:</p>
-<p>fxgx=f'xgxdx+fxg'xdx.</p>
-<p>And then,</p>
-<p>fxg'xdx=fxgx-f'xgxdx.</p>
-<p>It turns out that, in many cases, we have an integral of the form fxg'xdx but f'xgxdx is easier.</p>
-<p>This technique for turning one integral into another is called integration by parts.</p>
-<p>If we let u=f(x) and v=g(x), then du=f'xdx and dv=g'xdx. Thus</p>
-<p>udv=uv-vdu.</p>
-<p>To use this technique, we need to identify likely candidates for u=f(x) and dv=g'xdx.</p>
-<p>Example 1</p>
-<p>Evaluate xlnxdx.</p>
-<p>Solution</p>
-<p>Let u=lnx. So, du=1xdx.</p>
-<p>Then we must let dv=xdx. So, v=x22.</p>
-<p>And thus,</p>
-<p>xlnxdx=udv=uv-vdu</p>
-<p>=x2lnx2-x2dx</p>
-<p>=x2lnx2-x24+c.</p>
-<p>Example 2</p>
-<p>Evaluate xsinxdx.</p>
-<p>Solution</p>
-<p>Let u=x. So, du=dx.</p>
-<p>Then we must let dv=sinxdx. So, v=-cosx.</p>
-<p>And thus,</p>
-<p>xsinxdx=udv=uv-vdu</p>
-<p>=-xcosx+cosxdx</p>
-<p>=-xcosx+sinx+c.</p>
-<p>Example 3</p>
-<p>Evaluate x2sinxdx.</p>
-<p>Solution</p>
-<p>Let u=x2 and let dv=sinxdx.</p>
-<p>Then du=2xdx and v=-cosx.</p>
-<p>Now,</p>
-<p>x2sinxdx=uv-vdu</p>
-<p>=-x2cosx+2xcosxdx.</p>
-<p>This is better than the original integral, but we need to do integration by parts again.</p>
-<p>Let u=2x, dv=cosxdx.</p>
-<p>Then, du=2 and v=sinxdx.</p>
-<p>Thus,</p>
-<p>2xcosxdx=uv-vdu</p>
-<p>=2xsinx-2sinxdx</p>
-<p>=2xsinx+2cosx+c.</p>
-<p>Hence,</p>
-<p>x2sinxdx=-x2cosx+2xsinx+2cosx+c.</p>
 <h2 id="active-recall">Active recall</h2>
-<div class="steps"><div class="steps-title">Worked solution — reveal it step by step</div><div class="step"><button type="button" class="step-head"><span class="step-no">1</span><span class="step-name">Retrieval practice</span></button><div class="step-body"></div></div><div class="step"><button type="button" class="step-head"><span class="step-no">2</span><span class="step-name">Step 2</span></button><div class="step-body"><p>Close or cover the notes. Write the key idea, method, or definitions you remember.</p>
-</div></div><div class="step"><button type="button" class="step-head"><span class="step-no">3</span><span class="step-name">Step 3</span></button><div class="step-body"><p>Reopen the notes and correct your recall in a different color. Add weak points to the progress tracker.</p>
-</div></div><div class="steps-tools"><button type="button" class="steps-all">Reveal all steps</button></div></div>
+<ol>
+<li>Evaluate ∫3x² eˣ³ dx.</li>
+<li>Choose u and dv for ∫x eˣ dx, then evaluate.</li>
+<li>What are the two consistent ways to handle definite-integral limits after substitution?</li>
+</ol>
+<p><strong>Check:</strong> eˣ³ + C; u = x, dv = eˣ dx, giving eˣ(x − 1) + C; convert both limits to u or convert the antiderivative back to x before using x-limits.</p>
 <div class="practice-links"><span>Practise this topic:</span><a href="../practice/QUESTION_BANK.html">Question bank</a></div>
 
   </article>
@@ -152,7 +77,7 @@
 </main>
 <aside class="toc">
   <div class="toc-title">On this page</div>
-  <a href="#learning-checks">Learning checks</a><a href="#course-notes">Course notes</a><a href="#active-recall">Active recall</a>
+  <a href="#substitution">Substitution</a><a href="#integration-by-parts">Integration by parts</a><a href="#common-errors">Common errors</a><a href="#active-recall">Active recall</a>
 </aside>
 </div>
 <div class="search-overlay" id="searchOverlay" hidden>

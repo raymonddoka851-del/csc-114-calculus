@@ -35,76 +35,50 @@
     </div>
   </div>
   <article class="content">
-<div class="page-tools"><span class="check-count" id="checkCount">0 / 3 done</span><button type="button" class="reset-btn" id="resetChecks">Reset checklist</button><button type="button" class="done-btn" id="markDone">Mark as done</button></div>
+<div class="page-tools"><button type="button" class="done-btn" id="markDone">Mark as done</button></div>
 <h1 id="05-module-5-applications-of-differentiation">05 · Module 5 — Applications of Differentiation</h1>
-<blockquote><p>Source: Module 5.txt. This page is searchable, and the checklist state is saved in this browser.</p></blockquote>
-<h2 id="learning-checks">Learning checks</h2>
+<p><img class="note-figure" src="../assets/figures/module-5-image1.png" alt="Source illustration from Calculus Module 5" loading="lazy" decoding="async"></p>
+<blockquote><p>Sources: Calculus Modules 5–6. This module covers standard derivative families, curve behaviour, extrema, and Newton–Raphson approximation.</p></blockquote>
+<h2 id="standard-derivative-families">Standard derivative families</h2>
+<p>Use the chain rule when the input is not simply x.</p>
 <ul>
-<li><label class="task"><input type="checkbox" class="task-check" id="task1" data-task="task1"> <span class="task-text">Identify the key terms and explain them without looking.</span></label> </li>
-<li><label class="task"><input type="checkbox" class="task-check" id="task2" data-task="task2"> <span class="task-text">Summarize the main idea in your own words.</span></label> </li>
-<li><label class="task"><input type="checkbox" class="task-check" id="task3" data-task="task3"> <span class="task-text">Work through an example or answer a related question.</span></label> </li>
+<li>Trigonometric: (sin x)′ = cos x; (cos x)′ = −sin x; (tan x)′ = sec²x</li>
+<li>Also: (cot x)′ = −csc²x; (sec x)′ = sec x tan x; (csc x)′ = −csc x cot x</li>
+<li>Exponential/logarithmic: (eˣ)′ = eˣ; (aˣ)′ = aˣ ln a; (ln x)′ = 1/x for x &gt; 0</li>
+<li>Inverse trig: (arcsin x)′ = 1/√(1 − x²); (arccos x)′ = −1/√(1 − x²); (arctan x)′ = 1/(1 + x²); (arccot x)′ = −1/(1 + x²)</li>
+<li>Also: (arcsec x)′ = 1/(|x|√(x² − 1)); (arccsc x)′ = −1/(|x|√(x² − 1))</li>
+<li>Hyperbolic: (sinh x)′ = cosh x; (cosh x)′ = sinh x; (tanh x)′ = sech²x</li>
+<li>Also: (coth x)′ = −csch²x; (sech x)′ = −sech x tanh x; (csch x)′ = −csch x coth x</li>
+<li>Inverse hyperbolic: (arcsinh x)′ = 1/√(1 + x²); (arccosh x)′ = 1/√(x² − 1); (arctanh x)′ = 1/(1 − x²)</li>
+<li>Variable powers: for x &gt; 0, (xʳ)′ = r xʳ⁻¹ and (xˣ)′ = xˣ(ln x + 1)</li>
 </ul>
-<h2 id="course-notes">Course notes</h2>
-<p>Department of Mathematics and Statistics</p>
-<p>MODULE 6</p>
-<p>COURSE CODE: CSC 114                   COURSE TITLE: Differential and integral Calculus</p>
-<p>CHAPTER TWO</p>
-<p>DIFFERENTIATION</p>
-<p>2.8 Newton-Raphson Method for Solving Equations</p>
-<p>A method for finding the roots of an “arbitrary” function that uses the derivative was first circulated by Isaac Newton in 1669. John Wallis published Newton’s method in 1685, and in 1690 Joseph Raphson (1648–1715) published an improved version, the form we use today.</p>
-<p>The idea is as follows:</p>
-<p>We are given a function, say fx=x3-4x2-x+2. A graph of this function shows that the function has three roots: near -1, 1, and 4 as shown in the figure below.</p>
-<p>Those are not the exact values of the roots.</p>
-<p>We us an iterative procedure that gets us progressively closer to the root.</p>
-<p>If xk is our guess and neither f(xk) nor f'(xk) is zero, then the next approximation will be</p>
-<p>xk+1=xk-fxkf'xk.</p>
-<p>Now, suppose in the above f(x) we want to find the solution close to -1. The successive iterations (with ten-digit accuracy) are</p>
-<p>x2=-0.8;</p>
-<p>x3=-0.7628415301;</p>
-<p>x4=-0.7615586962;</p>
-<p>x5=-0.7615571818;</p>
-<p>x6=-0.7615571818.</p>
-<p>This is a very good approximation to the root as it is given up to 10 decimal places. This is the Newton-Raphson Method.</p>
-<p>To find the other two roots, we start closer to them.</p>
-<p>If the initial guess is not very accurate, it takes more iterative steps.</p>
-<p>Example 1</p>
-<p>Use the Newton-Raphson method, with 3 as starting point, to find a solution that is within 10-8 of 10.</p>
-<p>Solution</p>
-<p>The number 10 is the unique positive solution of the equation fx=0 where fx=x2-10.</p>
-<p>Let x0 be our initial estimate of the root and let xn be the n-th improved estimate.</p>
-<p>Note that f'x=2x.</p>
-<p>The Newton method recurrence is therefore,</p>
-<p>xn+1=xn-fxnf'xn=xn-xn2-102xn=xn-xn2+102xn=12xn+10xn.</p>
-<p>Starting with x0=3:</p>
-<p>x1=12x0+10x0=3.166666667;</p>
-<p>x2=12x1+10x1=3.162280702;</p>
-<p>x3=12x2+10x2=3.16227766;</p>
-<p>x4=12x3+10x3=3.16227766.</p>
-<p>We see that x3=x4 to 8 decimal places.</p>
-<p>Example 2</p>
-<p>Newton’s equation y3-2y-5=0 has a root near y=2. Starting with y0=2, compute y1, y2, and y3, the next three Newton-Raphson estimates for the root.</p>
-<p>Solution</p>
-<p>Let fy=y3-2y-5. Then f'y=3y2-2.</p>
-<p>Newton-Raphson method thus produces the recurrence:</p>
-<p>yn+1=yn-fynf'yn=yn-yn3-2yn-53yn2-2=2yn3+53yn2-2.</p>
-<p>Starting with y0=2, we have y1=2.1, y2=2.094568121, and y3=2.094551482.</p>
-<p>Example 3</p>
-<p>Find all solutions of e2x=x+6, correct to 4 decimal places. Use the Newton method.</p>
-<p>Solution</p>
-<p>Let fx=e2x-x-6.</p>
-<p>We want to find where fx=0.</p>
-<p>Note that f'x=2e2x-1. So, the Newton method iteration is</p>
-<p>xn+1=xn-e2xn-xn-62e2xn-1=2xn-1e2xn+62e2xn-1.</p>
-<p>We need to choose an initial estimate x0.</p>
-<p>Let x0=0.97. We then see that x1=0.970870836 and x2=0.97087002.</p>
-<p>Since x1 and x2 agree to 5 decimal places, then to 4 decimal places, the solution is 0.9709.</p>
-<p>Exercise</p>
-<p>Let fx=x2-a. Show that the Newton method leads to a recurrence</p>
-<p>xn+1=12xn+axn.</p>
+<p>For example, d/dx[sin(3x)] = 3 cos(3x); d/dx[eˣ²] = 2x eˣ².</p>
+<h2 id="stationary-points-and-classification">Stationary points and classification</h2>
+<p>A stationary point satisfies f′(x) = 0. Find its coordinates by solving f′ = 0 and substituting each x into f. At a stationary point:</p>
+<ul>
+<li>f″(x) &gt; 0: local minimum</li>
+<li>f″(x) &lt; 0: local maximum</li>
+<li>f″(x) = 0: test inconclusive; inspect higher derivatives or the sign of f′ on each side.</li>
+</ul>
+<p><strong>Worked example:</strong> f(x) = x² − 4x + 2. Then f′ = 2x − 4 = 0 gives x = 2; f(2) = −2. Since f″ = 2 &gt; 0, (2, −2) is a minimum.</p>
+<h2 id="newtonraphson-method">Newton–Raphson method</h2>
+<p>To approximate a root of f(x) = 0, start with a reasonable x₀ and iterate:</p>
+<p>xₙ₊₁ = xₙ − f(xₙ)/f′(xₙ).</p>
+<p>Stop when consecutive values agree to the required accuracy and verify that f(xₙ) is small. The method can fail if f′(xₙ) = 0 or the starting value is poor.</p>
+<p><strong>Worked example:</strong> For √10, solve f(x) = x² − 10 = 0. Then xₙ₊₁ = (xₙ + 10/xₙ)/2. Starting x₀ = 3 gives x₁ = 3.166667 and x₂ ≈ 3.162281, so √10 ≈ 3.1623.</p>
+<h2 id="common-errors">Common errors</h2>
+<ul>
+<li>In a composite function, multiply by the derivative of the inner expression.</li>
+<li>f″ = 0 alone does not prove a point of inflection or classify a stationary point.</li>
+<li>Newton–Raphson requires a nonzero derivative at each iterate; do not round too early.</li>
+</ul>
 <h2 id="active-recall">Active recall</h2>
-<div class="steps"><div class="steps-title">Worked solution — reveal it step by step</div><div class="step"><button type="button" class="step-head"><span class="step-no">1</span><span class="step-name">Retrieval practice</span></button><div class="step-body"></div></div><div class="step"><button type="button" class="step-head"><span class="step-no">2</span><span class="step-name">Step 2</span></button><div class="step-body"><p>Close or cover the notes. Write the key idea, method, or definitions you remember.</p>
-</div></div><div class="step"><button type="button" class="step-head"><span class="step-no">3</span><span class="step-name">Step 3</span></button><div class="step-body"><p>Reopen the notes and correct your recall in a different color. Add weak points to the progress tracker.</p>
-</div></div><div class="steps-tools"><button type="button" class="steps-all">Reveal all steps</button></div></div>
+<ol>
+<li>Differentiate y = ln(2x + 1).</li>
+<li>Classify the stationary point of y = −x² + 6x.</li>
+<li>Write one Newton step for f(x) = x³ − 2 starting at x₀ = 1.</li>
+</ol>
+<p><strong>Check:</strong> 2/(2x + 1); a maximum at (3, 9), since y″ = −2; x₁ = 1 − (−1)/3 = 4/3.</p>
 <div class="practice-links"><span>Practise this topic:</span><a href="../practice/QUESTION_BANK.html">Question bank</a></div>
 
   </article>
@@ -115,7 +89,7 @@
 </main>
 <aside class="toc">
   <div class="toc-title">On this page</div>
-  <a href="#learning-checks">Learning checks</a><a href="#course-notes">Course notes</a><a href="#active-recall">Active recall</a>
+  <a href="#standard-derivative-families">Standard derivative families</a><a href="#stationary-points-and-classification">Stationary points and classification</a><a href="#newtonraphson-method">Newton–Raphson method</a><a href="#common-errors">Common errors</a><a href="#active-recall">Active recall</a>
 </aside>
 </div>
 <div class="search-overlay" id="searchOverlay" hidden>

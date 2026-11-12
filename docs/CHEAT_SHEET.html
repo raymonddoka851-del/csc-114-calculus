@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CSC 114 — topic map · CSC 114 Revision</title>
+<title>CSC 114 — Practical Exam Review · CSC 114 Revision</title>
 <meta name="description" content="Study notes for CSC 114 Differential and Integral Calculus, arranged by module and the course outline.">
 <link rel="stylesheet" href="assets/notes.css">
 <link rel="stylesheet" href="assets/theme.css">
@@ -36,20 +36,68 @@
   </div>
   <article class="content">
 <div class="page-tools"><button type="button" class="done-btn" id="markDone">Mark as done</button></div>
-<h1 id="csc-114-topic-map">CSC 114 — topic map</h1>
-<p>Use this page as a fast index, not a replacement for the notes. Search by definition, method, example, or phrase to jump into the relevant section.</p>
+<h1 id="csc-114-practical-exam-review">CSC 114 — Practical Exam Review</h1>
+<p>Use this as a last-pass method and formula map, not as a substitute for solving problems. Equations are written in plain text and Unicode for quick scanning.</p>
+<h2 id="a-reliable-exam-routine">A reliable exam routine</h2>
+<ol>
+<li>Identify what is being asked: value, derivative, tangent, stationary point, antiderivative, definite accumulation, area, or approximation.</li>
+<li>Name the rule before using it. Show substitutions and intermediate algebra for method marks.</li>
+<li>Keep domains and units visible: denominators cannot be zero; logarithm inputs must be positive; trig-calculus formulas use radians.</li>
+<li>Check the result: differentiate an antiderivative, substitute into an equation, inspect signs, or verify the requested interval and units.</li>
+<li>If stuck, write the relevant definition/formula and make a valid first step rather than leaving the question blank.</li>
+</ol>
+<h2 id="12-foundations">1–2 · Foundations</h2>
 <ul>
-<li><strong>01 · Module 1 — Basic Mathematics</strong> — <a href="notes/01_module-1-basic-mathematics.html">notes/01_module-1-basic-mathematics.md</a></li>
-<li><strong>02 · Module 2 — Number Systems and Functions</strong> — <a href="notes/02_module-2-number-systems-and-functions.html">notes/02_module-2-number-systems-and-functions.md</a></li>
-<li><strong>03 · Module 3 — Introduction to Differentiation</strong> — <a href="notes/03_module-3-introduction-to-differentiation.html">notes/03_module-3-introduction-to-differentiation.md</a></li>
-<li><strong>04 · Module 4 — Methods of Differentiation</strong> — <a href="notes/04_module-4-methods-of-differentiation.html">notes/04_module-4-methods-of-differentiation.md</a></li>
-<li><strong>05 · Module 5 — Applications of Differentiation</strong> — <a href="notes/05_module-5-applications-of-differentiation.html">notes/05_module-5-applications-of-differentiation.md</a></li>
-<li><strong>06 · Module 6 — Integral Calculus</strong> — <a href="notes/06_module-6-integral-calculus.html">notes/06_module-6-integral-calculus.md</a></li>
-<li><strong>07 · Module 7 — Applications of Integration</strong> — <a href="notes/07_module-7-applications-of-integration.html">notes/07_module-7-applications-of-integration.md</a></li>
-<li><strong>08 · Module 8 — Integration by Substitution and Parts</strong> — <a href="notes/08_module-8-integration-by-substitution-and-parts.html">notes/08_module-8-integration-by-substitution-and-parts.md</a></li>
-<li><strong>09 · Module 9 — Partial Fractions</strong> — <a href="notes/09_module-9-partial-fractions.html">notes/09_module-9-partial-fractions.md</a></li>
-<li><strong>10 · Module 10 — Mean Value Theorem</strong> — <a href="notes/10_module-10-mean-value-theorem.html">notes/10_module-10-mean-value-theorem.md</a></li>
+<li>Rational number: a/b, with integers a, b and b ≠ 0; reduce by common factors.</li>
+<li>Exponent laws: aᵐaⁿ = aᵐ⁺ⁿ; (aᵐ)ⁿ = aᵐⁿ; a⁻ⁿ = 1/aⁿ (a ≠ 0).</li>
+<li>Radians: θ = s/r; degrees to radians: multiply by π/180.</li>
+<li>sin²x + cos²x = 1; sin(−x) = −sin x; cos(−x) = cos x.</li>
+<li>Complex z = a + bi: z̄ = a − bi; |z| = √(a² + b²); i² = −1.</li>
+<li>Line through two points: slope m = (y₂ − y₁)/(x₂ − x₁); then y − y₁ = m(x − x₁).</li>
 </ul>
+<h2 id="35-differentiation">3–5 · Differentiation</h2>
+<ul>
+<li>d/dx(c) = 0; d/dx(xⁿ) = n xⁿ⁻¹; differentiate sums term by term.</li>
+<li>Product: (fg)′ = f′g + fg′.</li>
+<li>Quotient: (f/g)′ = (f′g − fg′)/g².</li>
+<li>Chain: d/dx f(g(x)) = f′(g(x))g′(x).</li>
+<li>Trig: (sin x)′ = cos x; (cos x)′ = −sin x; (tan x)′ = sec²x.</li>
+<li>Exponential/log: (eˣ)′ = eˣ; (aˣ)′ = aˣ ln a; (ln x)′ = 1/x.</li>
+<li>Stationary points: solve f′(x) = 0; f″ &gt; 0 suggests minimum, f″ &lt; 0 suggests maximum. If f″ = 0, test further.</li>
+<li>Tangent at x = a: y − f(a) = f′(a)(x − a).</li>
+<li>Newton–Raphson: xₙ₊₁ = xₙ − f(xₙ)/f′(xₙ); stop when estimates agree to the requested precision.</li>
+</ul>
+<h2 id="610-integration">6–10 · Integration</h2>
+<ul>
+<li>∫xⁿ dx = xⁿ⁺¹/(n + 1) + C (n ≠ −1); ∫1/x dx = ln|x| + C.</li>
+<li>∫eᵏˣ dx = eᵏˣ/k + C (k ≠ 0); always include + C for an indefinite integral.</li>
+<li>Definite integral: ∫ₐᵇ f(x) dx = F(b) − F(a), where F′ = f.</li>
+<li>Area between curves: integrate upper − lower; split where curves cross.</li>
+<li>Accumulated rate: integrate rate over time. Displacement is ∫v; distance is ∫|v|.</li>
+<li>Substitution: choose u = inner function and replace du = u′ dx; consistently change or restore limits.</li>
+<li>Parts: ∫u dv = uv − ∫v du.</li>
+<li>Partial fractions: factor denominator, match each factor with a term, solve constants, then integrate.</li>
+<li>Integral average value: f_avg = (1/(b − a))∫ₐᵇ f(x) dx. The theorem guarantees f(c) = f_avg for some c in [a, b] if f is continuous.</li>
+</ul>
+<h2 id="method-chooser">Method chooser</h2>
+<div class="table-wrap"><table>
+<thead><tr><th style="text-align:left">What the integrand looks like</th><th style="text-align:left">First method to try</th></tr></thead>
+<tbody>
+<tr><td style="text-align:left">A sum of powers or standard functions</td><td style="text-align:left">Integrate term by term</td></tr>
+<tr><td style="text-align:left">A composite function times its inner derivative</td><td style="text-align:left">Substitution</td></tr>
+<tr><td style="text-align:left">A product such as x eˣ or x sin x</td><td style="text-align:left">Integration by parts</td></tr>
+<tr><td style="text-align:left">A proper rational function with a factorable denominator</td><td style="text-align:left">Partial fractions</td></tr>
+</tbody></table></div>
+<h2 id="final-checks">Final checks</h2>
+<ul>
+<li>Did you use radians for trig derivatives/integrals?</li>
+<li>Is the denominator nonzero on the interval?</li>
+<li>Did you include + C only when appropriate?</li>
+<li>Did you evaluate upper limit minus lower limit?</li>
+<li>Is area positive, and did you split at crossings?</li>
+<li>Does the answer have the requested units and accuracy?</li>
+</ul>
+<p>For worked practice, use the <a href="practice/QUESTION_BANK.html">30-question bank</a> and its <a href="practice/ANSWER_KEY.html">worked answer key</a>. Record weak topics and next actions in the <a href="PROGRESS_TRACKER.html">progress tracker</a>.</p>
 
   </article>
 <nav class="pager"><a class="prev" href="YOUR_STUDY_PLAN.html"><span class="dir">&larr; Previous</span><span class="name">Your study plan</span></a><a class="next" href="PROGRESS_TRACKER.html"><span class="dir">Next &rarr;</span><span class="name">Progress tracker</span></a></nav>
@@ -59,7 +107,7 @@
 </main>
 <aside class="toc">
   <div class="toc-title">On this page</div>
-  
+  <a href="#a-reliable-exam-routine">A reliable exam routine</a><a href="#12-foundations">1–2 · Foundations</a><a href="#35-differentiation">3–5 · Differentiation</a><a href="#610-integration">6–10 · Integration</a><a href="#method-chooser">Method chooser</a><a href="#final-checks">Final checks</a>
 </aside>
 </div>
 <div class="search-overlay" id="searchOverlay" hidden>
